@@ -296,8 +296,8 @@
 			
 			for (i in params)
 			{
-				// unclear at the moment why this line is now necessary	
-				if (typeof params[i] !== "function") {
+				// unclear at the moment why string check here is now necessary	
+				if (typeof params[i] === "string") {
 					name = t ? params[i].replace(this.router.namedParam.match, '$1') : i;
 					obj[name] = values[i];
 				}
